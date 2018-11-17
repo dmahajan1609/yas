@@ -1,16 +1,17 @@
 /**
- * Handler for `AMAZON.HelpIntent` requests
+ * Handler for `CreateStep` requests
  */
 module.exports = {
     canHandle({ requestEnvelope }) {
       const {
         request: { type, intent },
       } = requestEnvelope;
-      return type === 'IntentRequest' && intent.name === 'AMAZON.HelpIntent';
+      return type === 'IntentRequest' && intent.name === 'CreateStep';
     },
   
-    handle({ responseBuilder }) {
-      const output = 'What can I help you with?';
+    handle({ requestEnvelope, responseBuilder }) {
+      const step = requestEnvelope.request.intent.slots.StepName.value;
+      const output = `Yas! Step ${step} created.`;
       return responseBuilder
         .speak(output)
         .reprompt(output)
