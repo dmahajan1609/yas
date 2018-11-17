@@ -21,7 +21,7 @@ let skill;
  */
 exports.handler = async (event, context) => {
   if (!skill) {
-    skill = Alexa.SkillBuilders.standard()
+    skill = Alexa.SkillBuilders.custom()
       .addRequestHandlers(
         /* Add custom handlers above these */
         CancelStopHandler,

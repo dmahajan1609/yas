@@ -6,7 +6,7 @@ module.exports = {
     const {
       request: { type, intent },
     } = requestEnvelope;
-    return type === 'IntentRequest' && intent.name === 'LaunchRequest';
+    return type === 'LaunchRequest';
   },
 
   handle({ responseBuilder }) {
