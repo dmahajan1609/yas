@@ -5,7 +5,7 @@ const {
   FallbackHandler,
   HelpHandler,
   SessionEndedHandler,
-  LaunchRequestHandler
+  LaunchRequestHandler,
   // GoalHandler,
   // StepsHandler,
   // TasksHandler,
