@@ -6,3 +6,4 @@ Lety Rojas
 Clara Devers
 Charletta Bullard
 Divya Mahajan
+Gina Mariani
