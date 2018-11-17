@@ -1,11 +1,11 @@
 {
-  "name": "alexa-skill-boilerplate",
+  "name": "alexa-skill-yas",
   "version": "1.0.0",
-  "description": "Boilerplate for creating an Alexa skill using the Amazon Skills Kit SDK",
+  "description": "Alexa skill for a motivaltional tool to compelete life goals using the Amazon Skills Kit SDK",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adamgruber/alexa-skill-boilerplate.git"
+    "url": "https://github.com/dmahajan1609/yas"
   },
   "scripts": {
     "tunnel": "node support/tunnel.js",
