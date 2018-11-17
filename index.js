@@ -11,6 +11,9 @@ const CreateGoaltHandler = require('./src/handlers/CreateGoal');
 const CompleteTasktHandler = require('./src/handlers/CompleteTask');
 const AboutTasktHandler = require('./src/handlers/AboutTask');
 const CreateTasktHandler = require('./src/handlers/CreateTask');
+const CreateStepHandler = require('./src/handlers/CreateStep');
+const AboutStepHandler = require('./src/handlers/AboutStep');
+const CompleteSepHandler = require('./src/handlers/CompleteStep');
 
 /* Replace with skill id from Alexa developer console */
 const alexAppId = 'amzn1.ask.skill.54c76e12-9b20-47ac-a939-e1f5503d8bb9';
@@ -40,7 +43,10 @@ exports.handler = async (event, context) => {
         CreateGoaltHandler,
         CompleteTasktHandler,
         AboutTasktHandler,
-        CreateTasktHandler
+        CreateTasktHandler,
+        CreateStepHandler,
+        AboutStepHandler,
+        CompleteSepHandler
       )
       .addErrorHandlers(ErrorHandler)
       .withSkillId(alexAppId)
