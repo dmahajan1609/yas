@@ -9,8 +9,9 @@ module.exports = {
       return type === 'IntentRequest' && intent.name === 'CreateStep';
     },
   
-    handle({ responseBuilder }) {
-      const output = 'Yas! Step created.';
+    handle({ requestEnvelope, responseBuilder }) {
+      const step = requestEnvelope.request.intent.slots.StepName.value;
+      const output = `Yas! Step ${step} created.`;
       return responseBuilder
         .speak(output)
         .reprompt(output)
