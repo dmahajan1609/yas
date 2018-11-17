@@ -5,10 +5,14 @@ const {
   FallbackHandler,
   HelpHandler,
   SessionEndedHandler,
+  LaunchRequestHandler
+  // GoalHandler,
+  // StepsHandler,
+  // TasksHandler,
 } = require('./src/handlers');
 
 /* Replace with skill id from Alexa developer console */
-const alexAppId = 'amzn1.ask.skill.unique-skill-id';
+const alexAppId = 'amzn1.ask.skill.54c76e12-9b20-47ac-a939-e1f5503d8bb9';
 
 let skill;
 
@@ -29,6 +33,7 @@ exports.handler = async (event, context) => {
         FallbackHandler,
         HelpHandler,
         SessionEndedHandler
+        LaunchRequestHandler
       )
       .addErrorHandlers(ErrorHandler)
       .withSkillId(alexAppId)
