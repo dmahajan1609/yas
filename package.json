@@ -24,19 +24,5 @@
     "@koa/cors": "^2.2.1",
     "ask-sdk": "^2.0.1"
   },
-  "devDependencies": {
-    "cross-spawn": "^6.0.5",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "koa": "^2.5.1",
-    "koa-bodyparser": "^4.2.0",
-    "koa-router": "^7.4.0",
-    "koa-static": "^4.0.2",
-    "ngrok": "^3.0.1",
-    "nodemon": "^1.17.3",
-    "prettier": "^1.12.1"
-  }
+  "devDependencies": {}
 }
