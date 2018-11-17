@@ -5,6 +5,12 @@ const FallbackHandler = require('./src/handlers/AmazonFallback');
 const HelpHandler = require('./src/handlers/AmazonHelp');
 const SessionEndedHandler = require('./src/handlers/SessionEnded');
 const LaunchRequestHandler = require('./src/handlers/LaunchRequest');
+const CompleteGoaltHandler = require('./src/handlers/CompleteGoal');
+const AboutGoaltHandler = require('./src/handlers/AboutGoal');
+const CreateGoaltHandler = require('./src/handlers/CreateGoal');
+const CompleteTasktHandler = require('./src/handlers/CompleteTask');
+const AboutTasktHandler = require('./src/handlers/AboutTask');
+const CreateTasktHandler = require('./src/handlers/CreateTask');
 
 /* Replace with skill id from Alexa developer console */
 const alexAppId = 'amzn1.ask.skill.54c76e12-9b20-47ac-a939-e1f5503d8bb9';
@@ -28,7 +34,13 @@ exports.handler = async (event, context) => {
         FallbackHandler,
         HelpHandler,
         SessionEndedHandler,
-        LaunchRequestHandler
+        LaunchRequestHandler,
+        CompleteGoaltHandler,
+        AboutGoaltHandler,
+        CreateGoaltHandler,
+        CompleteTasktHandler,
+        AboutTasktHandler,
+        CreateTasktHandler
       )
       .addErrorHandlers(ErrorHandler)
       .withSkillId(alexAppId)
