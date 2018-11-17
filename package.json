@@ -7,12 +7,7 @@
     "type": "git",
     "url": "https://github.com/dmahajan1609/yas"
   },
-  "scripts": {
-    "tunnel": "node support/tunnel.js",
-    "start": "node support/start.js",
-    "devserver": "nodemon support/devserver.js",
-    "lint": "eslint index.js src"
-  },
+  "scripts": {},
   "keywords": [
     "alexa",
     "boilerplate",
@@ -21,8 +16,7 @@
   "author": "Adam Gruber",
   "license": "MIT",
   "dependencies": {
-    "@koa/cors": "^2.2.1",
-    "ask-sdk": "^2.0.1"
+    "ask-sdk-core": "^2.3.0"
   },
   "devDependencies": {}
 }
