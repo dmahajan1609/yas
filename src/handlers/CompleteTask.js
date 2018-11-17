@@ -1,19 +1,20 @@
 /**
- * Handler for `AMAZON.HelpIntent` requests
+ * Handler for `CompleteTask` requests
  */
 module.exports = {
-    canHandle({ requestEnvelope }) {
-      const {
-        request: { type, intent },
-      } = requestEnvelope;
-      return type === 'IntentRequest' && intent.name === 'AMAZON.HelpIntent';
-    },
-  
-    handle({ responseBuilder }) {
-      const output = 'What can I help you with?';
-      return responseBuilder
-        .speak(output)
-        .reprompt(output)
-        .getResponse();
-    },
-  };
+  canHandle({ requestEnvelope }) {
+    const {
+      request: { type, intent },
+    } = requestEnvelope;
+    return type === 'IntentRequest' && intent.name === 'CompleteTask';
+  },
+
+  handle({ responseBuilder, requestEnvelope }) {
+    const taskName = requestEnvelope.request.intent.slots.TaskName.value;
+    const output = `Yas! you completed the ${taskName} task. You rock gurl! keep it going`;
+    return responseBuilder
+      .speak(output)
+      .reprompt(output)
+      .getResponse();
+  },
+};
