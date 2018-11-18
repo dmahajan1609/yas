@@ -18,7 +18,7 @@ module.exports = {
     // TODO: validate a step was return
     // TODO: validate all tasks are complete
     step.status = "complete";
-    const output = `Yas! you beatiful, talented, brilliant, and powerful muskox. You completed step ${stepName}. ${positivity.stepMessage()}`;
+    const output = `Yas! you beautiful, talented, brilliant, and powerful muskox. You completed step ${stepName}. ${positivity.stepMessage()}`;
     return responseBuilder
       .speak(output)
       .reprompt(output)
