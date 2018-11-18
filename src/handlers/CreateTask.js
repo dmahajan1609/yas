@@ -1,3 +1,4 @@
+var positivity = require("../data/positivity")
 var models = require("../data/models")
 /**
  * Handler for `CreateTask` requests
@@ -22,7 +23,7 @@ module.exports = {
     const task = new models.Task(taskName);
     step.tasks.push(task)
     
-    const output = `Yas! Create task ${taskName} for step ${stepName}.`;
+    const output = `Yas! You created task ${taskName} for step ${stepName}. ${positivity.hypeMessage()}`;
     return responseBuilder
       .speak(output)
       .reprompt(output)

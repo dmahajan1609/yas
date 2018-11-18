@@ -1,3 +1,4 @@
+var positivity = require("../data/positivity")
 var models = require("../data/models")
 /**
  * Handler for `CreateStep` requests
@@ -16,7 +17,7 @@ module.exports = {
       const stepName = requestEnvelope.request.intent.slots.StepName.value;
       const step = new models.Step(stepName);
       goal.steps.push(step);
-      const output = `Yas! You added step ${step.name} to goal ${goal.name}.`;
+      const output = `Yas! You added step ${step.name} to goal ${goal.name}. ${positivity.hypeMessage()}`;
       return responseBuilder
         .speak(output)
         .reprompt(output)
