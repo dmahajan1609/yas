@@ -40,17 +40,11 @@ Gina Mariani.
 # Example script
 - Alexa, open yas plan
 - create goal do a hackathon
-- create step meet awesome people
-- create task show up for step meet awesome people
-- create task be awesome for step meet awesome people
-- create step make a project
-- create task work together for step make a project
+- create step work with awesome people
+- create task be awesome for step work with awesome people
 - tell me about goal do a hackathon
-- tell me about step meet awesome people
-- complete task show up for step meet awesome people
-- tell me about step meet awesome people
-- complete task be awesome for step meet awesome people
-- complete step meet awesome people
-- complete task work together for step make a project
-- complete step make a project
+- complete task be awesome for step work with awesome people
+- complete step work with awesome people
+- tell me about goal do a hackathon
 - complete goal do a hackathon
+- tell me about goal do a hackathon
