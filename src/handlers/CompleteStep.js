@@ -12,7 +12,7 @@ module.exports = {
 
   handle({ responseBuilder, requestEnvelope }) {
     const stepName = requestEnvelope.request.intent.slots.StepName.value;
-    const output = `Yas! you beatiful, talented, brilliant, and powerful muskox. You completed step ${stepName}. ${positivity.stepMessage()}`;
+    const output = `Yas! you beautiful, talented, brilliant, and powerful muskox. You completed step ${stepName}. ${positivity.stepMessage()}`;
     return responseBuilder
       .speak(output)
       .reprompt(output)
