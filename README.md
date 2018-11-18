@@ -35,7 +35,7 @@ Lety Rojas,
 Clara Devers,
 Charletta Bullard,
 Divya Mahajan,
-Gina Mariani,
+Gina Mariani.
 
 # Example script
 - Alexa, open yas plan
