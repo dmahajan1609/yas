@@ -25,33 +25,45 @@
                 },
                 {
                     "name": "CreateGoal",
-                    "slots": [],
+                    "slots": [
+                        {
+                            "name": "GoalName",
+                            "type": "Goal"
+                        }
+                    ],
                     "samples": [
-                        "make goal hackthon",
-                        "add goal hackathon",
-                        "create goal hackathon"
+                        "make goal {GoalName}",
+                        "create goal {GoalName}",
+                        "add goal {GoalName}"
                     ]
                 },
                 {
                     "name": "CompleteGoal",
-                    "slots": [],
+                    "slots": [
+                        {
+                            "name": "GoalName",
+                            "type": "Goal"
+                        }
+                    ],
                     "samples": [
-                        "complete goal",
-                        "finish goal",
-                        "finish goal hackthon"
+                        "complete goal {GoalName}",
+                        "finish goal {GoalName}"
                     ]
                 },
                 {
                     "name": "AboutGoal",
-                    "slots": [],
+                    "slots": [
+                        {
+                            "name": "GoalName",
+                            "type": "Goal"
+                        }
+                    ],
                     "samples": [
-                        "about our goal",
-                        "what is our goal",
-                        "about my goal",
-                        "about goal",
-                        "what is the goal",
-                        "what is my goal",
-                        "about the goal"
+                        "about goal {GoalName}",
+                        "about our goal {GoalName}",
+                        "about my goal {GoalName}",
+                        "about the goal",
+                        "about goal"
                     ]
                 },
                 {
@@ -63,10 +75,9 @@
                         }
                     ],
                     "samples": [
-                        "add a step {StepName}",
-                        "make a step {StepName}",
+                        "add step {StepName}",
+                        "enter step {StepName}",
                         "create step {StepName}",
-                        "create a step {StepName}",
                         "make step {StepName}"
                     ]
                 },
@@ -79,9 +90,9 @@
                         }
                     ],
                     "samples": [
-                        "marks step {StepName} done",
-                        "complete step {StepName}",
-                        "finish step {StepName}"
+                        "mark step {StepName} done",
+                        "finish step {StepName}",
+                        "complete step {StepName}"
                     ]
                 },
                 {
@@ -93,7 +104,6 @@
                         }
                     ],
                     "samples": [
-                        "what is step {StepName}",
                         "about step {StepName}"
                     ]
                 },
@@ -101,18 +111,19 @@
                     "name": "CreateTask",
                     "slots": [
                         {
-                            "name": "StepName",
-                            "type": "Step"
-                        },
-                        {
                             "name": "TaskName",
                             "type": "Task"
+                        },
+                        {
+                            "name": "StepName",
+                            "type": "Step"
                         }
                     ],
                     "samples": [
+                        "add task {TaskName} to step {StepName}",
+                        "enter task {TaskName} for step {StepName}",
                         "make task {TaskName} for step {StepName}",
-                        "create task {TaskName} for step {StepName}",
-                        "enter task {TaskName} for step {StepName}"
+                        "create task {TaskName} for step {StepName}"
                     ]
                 },
                 {
@@ -121,12 +132,15 @@
                         {
                             "name": "TaskName",
                             "type": "Task"
+                        },
+                        {
+                            "name": "StepName",
+                            "type": "Step"
                         }
                     ],
                     "samples": [
-                        "Mark task {TaskName} done",
-                        "Finish task {TaskName}",
-                        "Complete task {TaskName}"
+                        "finish task {TaskName} for step {StepName}",
+                        "complete task {TaskName} for step {StepName}"
                     ]
                 },
                 {
@@ -135,11 +149,14 @@
                         {
                             "name": "TaskName",
                             "type": "Task"
+                        },
+                        {
+                            "name": "StepName",
+                            "type": "Step"
                         }
                     ],
                     "samples": [
-                        "what is task  {TaskName}",
-                        "about task {TaskName}"
+                        "about task {TaskName} for step {StepName}"
                     ]
                 }
             ],
@@ -149,17 +166,32 @@
                     "values": [
                         {
                             "name": {
-                                "value": "Presenting"
+                                "value": "word"
                             }
                         },
                         {
                             "name": {
-                                "value": "Implementating"
+                                "value": "word word word"
                             }
                         },
                         {
                             "name": {
-                                "value": "Planning"
+                                "value": "word word"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "presenting"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "implementing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "planning"
                             }
                         }
                     ]
@@ -167,6 +199,21 @@
                 {
                     "name": "Task",
                     "values": [
+                        {
+                            "name": {
+                                "value": "word word word"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "word word"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "word"
+                            }
+                        },
                         {
                             "name": {
                                 "value": "feel awesome"
@@ -180,11 +227,6 @@
                         {
                             "name": {
                                 "value": "create visual representation"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "test test test"
                             }
                         },
                         {
@@ -215,6 +257,26 @@
                         {
                             "name": {
                                 "value": "meet the team"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Goal",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "word word word"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "word word"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "word"
                             }
                         }
                     ]
