@@ -1,3 +1,4 @@
+var positivity = require("../data/positivity.js")
 /**
  * Handler for `CompleteGoal` requests
  */
@@ -10,7 +11,7 @@ module.exports = {
     },
   
     handle({ responseBuilder }) {
-      const output = 'Yas! You completed your goal.';
+      const output = `Yas! You completed your goal. ${positivity.goalMessage()}`;
       return responseBuilder
         .speak(output)
         .reprompt(output)
