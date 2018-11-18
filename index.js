@@ -16,7 +16,7 @@ const AboutStepHandler = require('./src/handlers/AboutStep');
 const CompleteSepHandler = require('./src/handlers/CompleteStep');
 
 /* Replace with skill id from Alexa developer console */
-const alexAppId = 'amzn1.ask.skill.54c76e12-9b20-47ac-a939-e1f5503d8bb9';
+const alexAppId = 'amzn1.ask.skill.e1b177a9-871b-4ff2-8d20-a3cbbdd56c24';
 
 let skill;
 

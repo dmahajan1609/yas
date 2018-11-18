@@ -10,7 +10,12 @@ module.exports = {
       return type === 'IntentRequest' && intent.name === 'CompleteGoal';
     },
   
-    handle({ responseBuilder }) {
+    handle({ attributesManager, responseBuilder }) {
+      const attributes = attributesManager.getSessionAttributes();
+
+      // TODO: Validate all steps are complete first.
+      
+      attributes.goal.status = "complete";
       const output = `Yas! You completed your goal. ${positivity.goalMessage()}`;
       return responseBuilder
         .speak(output)

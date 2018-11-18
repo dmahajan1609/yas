@@ -1,3 +1,4 @@
+var models = require("../data/models")
 /**
  * Handler for `yas.AboutGoal` requests
  */
@@ -9,8 +10,12 @@ module.exports = {
       return type === 'IntentRequest' && intent.name === 'AboutGoal';
     },
   
-    handle({ responseBuilder }) {
-      const output = 'Yas queen, let me tell you about your complete hackathon goal';
+    handle({ attributesManager, responseBuilder }) {
+      const attributes = attributesManager.getSessionAttributes();
+      const goal = attributes.goal;
+      let incomplete = models.GetIncompleteStepsCount(goal)
+      let remainder = incomplete > 0 ? `You have ${incomplete} steps to go.` : "";
+      const output = `Yas queen, let me tell you about your goal ${goal.name}. It is ${goal.status}. ${remainder}`;
       return responseBuilder
         .speak(output)
         .reprompt(output)
