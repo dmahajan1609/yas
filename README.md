@@ -31,11 +31,11 @@ run npm install
 ```
 
 # Credits :woman_technologist:
-Lety Rojas
-Clara Devers
-Charletta Bullard
-Divya Mahajan
-Gina Mariani
+Lety Rojas,
+Clara Devers,
+Charletta Bullard,
+Divya Mahajan,
+Gina Mariani,
 
 # Example script
 - Alexa, open yas plan
