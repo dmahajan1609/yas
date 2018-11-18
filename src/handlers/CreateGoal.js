@@ -1,3 +1,4 @@
+var positivity = require("../data/positivity")
 var models = require("../data/models")
 /**
  * Handler for `CreateGoal` requests
@@ -15,7 +16,7 @@ module.exports = {
       let goalName = requestEnvelope.request.intent.slots.GoalName.value;
       let goal = new models.Goal(goalName);
       sessionAttributes.goal = goal;
-      const output = `Yas! You have created a goal: ${goal.name}. Let\'s get started`;
+      const output = `Yas! You have created a goal: ${goal.name}. ${positivity.hypeMessage()}`;
       return responseBuilder
         .speak(output)
         .reprompt(output)

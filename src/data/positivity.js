@@ -15,6 +15,14 @@ const data = {
     "goalMessages": [
         "You did it! Go out and grab the world by the lapels.",
         "Wow! This goal was your cup of tea, but now you're drinking champagne."
+    ],
+    "hypeMessages": [
+        "Belive in yourself!",
+        "Will it be easy? No. Will it be worth it? Absolutely.",
+        "Stay classy, sassy, and a bit bad assy.",
+        "Slay your day.",
+        "Believe in your inner Beyonce!",
+        "Stay focused and extra sparkly."
     ]
 }
 
@@ -31,5 +39,8 @@ module.exports = {
     },
     goalMessage: function() {
         return random(data.goalMessages);
+    },
+    hypeMessage: function() {
+        return random(data.hypeMessages);
     }
 }
