@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "yas",
+            "invocationName": "yas plan",
             "intents": [
                 {
                     "name": "AMAZON.FallbackIntent",
